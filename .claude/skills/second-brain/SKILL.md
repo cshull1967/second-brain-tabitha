@@ -88,7 +88,7 @@ Files to write (use the answers from `second-brain-intake.md`):
 | `references/voice-notes.md` | Q4 (samples only) | Only create this file if Q4 was answered with writing samples (not a tone-of-voice document). Three short observation paragraphs: (1) sentence rhythm and length tendencies, (2) hedging and qualifier patterns, (3) register (formal/informal, warm/dry, direct/diplomatic). Do not capture content opinions or specific claims. This is a register reference, not a content reference. |
 | `references/templates-index.md` | Q8 | List of named artefacts and their locations. See conditional logic below for the empty-answer case. |
 
-Then update `CLAUDE.md` (the root file). Replace the `{{placeholders}}`:
+Then update **both** root operating manuals, `CLAUDE.md` and `AGENTS.md`. They are twins: `CLAUDE.md` is read by Claude, `AGENTS.md` is read by Codex CLI. Replace the **same** `{{placeholders}}` in each with **identical** values, so the brain works the same under either agent:
 
 - `{{name}}` → the user's name from Q1
 - `{{role_one_liner}}` → their role/business one-liner from Q1
@@ -99,6 +99,8 @@ Then update `CLAUDE.md` (the root file). Replace the `{{placeholders}}`:
 - `{{priorities_list}}` → numbered list, same content as `priorities.md`
 - `{{populated_context_files}}` → list of files now populated in `context/`, as a bulleted list of wikilinks
 - `{{populated_reference_files}}` → same for `references/`
+
+If `AGENTS.md` is not present (an older copy of the kit), skip it silently and fill `CLAUDE.md` only. Never create `AGENTS.md` from scratch if it is missing; only fill the placeholders in the one that ships with the kit.
 
 ### Conditional logic for Q8 (empty answer)
 
@@ -135,7 +137,7 @@ Do not print anything else. No "let me know if you need anything else", no "I ho
 1. **One question at a time.** Never batch questions in a single message.
 2. **Write to intake as you go.** Every answered question gets written into `second-brain-intake.md` immediately, before the next question is asked. Resumability is a feature, not a polish.
 3. **Voice paste-refusal is non-negotiable.** Hold the line on Q4 even if the user pushes.
-4. **No gold-plating the scaffold.** Eight files in `context/` and `references/`, plus the CLAUDE.md update. Nothing more. Do not create `notes.md`, `summary.md`, `welcome.md` or any other file that isn't in the scaffold mapping above.
+4. **No gold-plating the scaffold.** Eight files in `context/` and `references/`, plus filling the placeholders in the two root manuals (`CLAUDE.md` and `AGENTS.md`). Nothing more. Do not create `notes.md`, `summary.md`, `welcome.md` or any other file that isn't in the scaffold mapping above. Do not create new manual files; only fill the ones that ship with the kit.
 5. **No content opinions in `voice-notes.md`.** Capture register, not subject-matter beliefs.
 6. **UK English throughout.** No em dashes. No banned-list consultant words.
 7. **Idempotency.** If `context/about-me.md` already exists when Phase 3 starts, archive **first**, then regenerate. Never overwrite without backup.

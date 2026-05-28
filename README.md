@@ -52,7 +52,8 @@ After running `/second-brain` you'll have:
 
 ```
 my-brain/
-├── CLAUDE.md                    ← your brain's operating manual
+├── CLAUDE.md                    ← your brain's operating manual (Claude)
+├── AGENTS.md                    ← the same manual for Codex CLI (see optional section below)
 ├── second-brain-intake.md       ← your answers (editable; re-run the skill to update)
 ├── function-inventory.md        ← audit template (used on Day 2 of the bootcamp)
 ├── context/
@@ -87,6 +88,24 @@ Both skills are **idempotent**. You can re-run them as your business changes.
 - Run `/hire` again with a different name to add a second employee. Same name twice creates `<name>-2.md`, not overwrite. All employees live in the same project and you switch between them by addressing them by name.
 
 You drive the brain by editing answers in the intake file. The skill does the file-writing.
+
+---
+
+## Using it with Codex CLI (optional)
+
+The bootcamp is taught in Claude Code. Everything you'll see demonstrated is Claude Code. But your brain isn't locked to Claude.
+
+This kit ships with an `AGENTS.md` file (the Codex equivalent of `CLAUDE.md`) and a copy of both skills under `.agents/skills/`, which is where Codex CLI looks for them. So the same brain, the same employees you hire, and the same `second-brain` and `hire` skills all run under [OpenAI Codex CLI](https://developers.openai.com/codex/cli) with no changes.
+
+If you're a Codex user:
+
+```bash
+git clone https://github.com/tabithawinter-jpg/second-brain.git my-brain
+cd my-brain
+codex
+```
+
+Then ask Codex to build your second brain, the same way you would in Claude Code. When you build your own skills later, Codex uses the identical `SKILL.md` format, so anything you learn here carries straight across.
 
 ---
 
