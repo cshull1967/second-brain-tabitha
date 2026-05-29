@@ -63,10 +63,16 @@ my-brain/
 │   ├── icp.md
 │   ├── priorities.md
 │   └── never-assume.md
-└── references/
-    ├── voice.md
-    └── voice-notes.md (if you pasted writing samples)
+├── references/
+│   ├── voice.md
+│   └── voice-notes.md (if you pasted writing samples)
+├── raw/                          ← things you capture and never edit (transcripts, notes, articles)
+│   └── README.md
+└── wiki/                         ← synthesis you can regenerate as your thinking changes
+    └── README.md
 ```
+
+The `raw/` and `wiki/` folders are where the capture-and-synthesis method from the bootcamp lives. `raw/` holds source material you keep exactly as captured and never edit; `wiki/` holds the summaries and patterns you build from it, which you can regenerate any time. Each folder has a short README explaining how to use it. They start empty and you fill them as you work.
 
 After running `/hire` you'll also have:
 

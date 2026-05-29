@@ -74,6 +74,8 @@ When the interview is done (or the user has opted to scaffold from partial answe
 2. Move every existing populated file in `context/` and `references/` into that archive directory.
 3. Then proceed to generate fresh files from the current intake.
 
+**Never archive, move, or overwrite anything in `raw/` or `wiki/`.** Those two folders hold the user's own accumulated captures and synthesis, and they run on a different discipline (see *Capture folders* below). On every run, first or repeat, leave their contents exactly as they are. Archiving applies to `context/` and `references/` only.
+
 Files to write (use the answers from `second-brain-intake.md`):
 
 | Output file | Source | Format |
@@ -118,6 +120,16 @@ If the user's Q8 answer is "none", "I don't have any", blank, or any equivalent:
 
 The empty Q8 becomes a forward prompt rather than a missing file. The brain notices the gap and feeds it forward into priorities.
 
+### Capture folders (raw/ and wiki/)
+
+The brain ships two folders for the capture-and-synthesis method taught in the bootcamp (the "Karpathy track"): `raw/` for source material that is never edited, and `wiki/` for synthesis that can be regenerated. Both ship in the kit already, each with a `README.md` that teaches the rule.
+
+Your only job here: **make sure both folders and their READMEs exist, and never touch them otherwise.**
+
+- If `raw/README.md` or `wiki/README.md` is missing (an older copy of the kit), create the folder and write a short seed README: raw holds captured source material that is never edited (name files `YYYY-MM-DD-source-slug.md`); wiki holds synthesis that can be regenerated and lists the raw sources it draws from. Keep each to a short paragraph.
+- If they already exist, leave them exactly as they are. Do not regenerate, reword, or overwrite.
+- Do not write any other content into `raw/` or `wiki/`. At build time the user has no captures yet. The folders stand ready; the user and their AI employee fill them over time.
+
 ## Phase 4. The closing screen
 
 Print exactly these three blocks (with one blank line between each):
@@ -137,7 +149,7 @@ Do not print anything else. No "let me know if you need anything else", no "I ho
 1. **One question at a time.** Never batch questions in a single message.
 2. **Write to intake as you go.** Every answered question gets written into `second-brain-intake.md` immediately, before the next question is asked. Resumability is a feature, not a polish.
 3. **Voice paste-refusal is non-negotiable.** Hold the line on Q4 even if the user pushes.
-4. **No gold-plating the scaffold.** Eight files in `context/` and `references/`, plus filling the placeholders in the two root manuals (`CLAUDE.md` and `AGENTS.md`). Nothing more. Do not create `notes.md`, `summary.md`, `welcome.md` or any other file that isn't in the scaffold mapping above. Do not create new manual files; only fill the ones that ship with the kit.
+4. **No gold-plating the scaffold.** Eight files in `context/` and `references/`, the two capture folders (`raw/` and `wiki/`) with their seed READMEs, plus filling the placeholders in the two root manuals (`CLAUDE.md` and `AGENTS.md`). Nothing more. Do not create `notes.md`, `summary.md`, `welcome.md` or any other file that isn't in the scaffold mapping above. Do not create new manual files; only fill the ones that ship with the kit. Never write content into `raw/` or `wiki/` beyond their seed READMEs.
 5. **No content opinions in `voice-notes.md`.** Capture register, not subject-matter beliefs.
 6. **UK English throughout.** No em dashes. No banned-list consultant words.
 7. **Idempotency.** If `context/about-me.md` already exists when Phase 3 starts, archive **first**, then regenerate. Never overwrite without backup.

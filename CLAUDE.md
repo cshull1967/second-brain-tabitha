@@ -61,6 +61,20 @@ Populated references:
 
 {{populated_reference_files}}
 
+Two more folders stand ready for the capture-and-synthesis method: `raw/` and `wiki/`. See the section below.
+
+---
+
+## Capturing source material and synthesis
+
+Two folders run on a different discipline from the rest of your brain. This is the method the bootcamp calls the Karpathy track.
+
+**`raw/` is for captured moments, and it is never edited.** Meeting transcripts, voice notes, articles worth keeping, observations. Once something lands in `raw/`, leave it alone: it is a record of what was said or seen at the time. If you later find an error in it, write a new note and link the two rather than changing the original. Name files `YYYY-MM-DD-source-slug.md`. Full rule in [[raw/README.md|raw]].
+
+**`wiki/` is for synthesis, and it can be rewritten any time.** When you pull together what you have learned about a client, a topic, or a problem across several raw captures, that is a wiki file. Unlike raw, wiki is meant to be regenerated as your understanding shifts. Each wiki file lists the raw sources it draws from, so it can be rebuilt. Full rule in [[wiki/README.md|wiki]].
+
+The short version: raw is what happened, wiki is what you make of it. Raw never changes; wiki always can.
+
 ---
 
 ## How to use this brain
