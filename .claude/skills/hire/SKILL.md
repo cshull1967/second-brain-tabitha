@@ -25,7 +25,11 @@ If **any** of these are missing, refuse to continue. Print **exactly** this:
 
 Stop. Do not proceed to questions. This is a hard fail with a redirect, not a soft warning.
 
-If all five exist, **read them all** before asking Q1. Then print:
+If all five exist, **read them all** before asking Q1.
+
+Also read these if they exist (optional, do not hard-fail if they are missing) and use them to ground Q3 and Q4: `function-inventory.md` in the repo root (the user's externalisable tasks), and any process map the user saved in `references/` (for example `references/process-map.md`, or notes from a hand-drawn map). The map's steps feed Q3; the map's rules feed Q4.
+
+Then print:
 
 > "Brain loaded. Let's hire."
 
@@ -61,11 +65,17 @@ If they say 'help with marketing', push back: 'What does that actually mean? Wri
 
 If their brain has a `function-inventory.md` filled in, you can offer: "Want me to pull the rows you marked Fully externalisable as a starting point?"
 
-### Q4. What should this employee NOT do? (conversational)
+If they drew a process map, point them at it: "Your process map already answers this. Its steps are the things this employee does, read them straight off."
 
-"The hard lines. Where their authority stops. What they should never decide on your behalf.
+### Q4. What can they use, and what should they NOT do? (conversational)
 
-Examples: 'Never send email without my review.' 'Never commit me to meetings.' 'Never invent statistics.' 'Never make claims about the business I haven't approved.'"
+Two halves of the same line: the tools you hand them, and the hard limits on what they do with them. Capture them separately, they go into two different sections of the JD.
+
+"First, the tools. What should this employee be able to use? Reading your inbox, drafting replies, reading your calendar, proposing times, creating tasks or files, searching the web. Name what they may touch, and what stays off-limits. For an executive assistant that is usually 'reads and drafts, but never sends or books on its own'.
+
+Then the hard lines. Where their authority stops, what they should never decide on your behalf. Examples: 'Never send email without my review.' 'Never commit me to meetings.' 'Never invent statistics.' 'Never quote a price.'"
+
+If they drew a process map, this is its Rules column: the tools each step needs, and the lines they wrote next to them.
 
 ### Q5. What should they push back on? (structured / AskUserQuestion)
 
@@ -151,9 +161,13 @@ You are {Name}, {Title}. {Purpose, one sentence from Q1, recast in second-person
 
 {The 3-5 responsibilities from Q3, as a bulleted list. Each item written as a verb-led action in second person. e.g. "Write LinkedIn posts in {brain owner}'s voice."}
 
+## Tools you can use
+
+{From the tools half of Q4, written second-person. The surfaces and tools this employee may use, e.g. "You may read {brain owner}'s inbox and draft replies. You may read the calendar and propose times. You may create tasks and files." Then the tool-level limits, e.g. "You do not send email or book meetings on your own." If the user named no tools, write a single line: "You read and draft. You do not act on any tool without {brain owner}'s approval." which is the safe default for a first hire.}
+
 ## What you don't do
 
-{The boundaries from Q4, as a bulleted list, each in second person. e.g. "You never send email without {brain owner}'s review."}
+{The behavioural hard lines from Q4, the judgement calls rather than the tool limits (those live in Tools you can use), as a bulleted list, each in second person. e.g. "You never quote a price." "You never agree to out-of-scope work on {brain owner}'s behalf."}
 
 ## How you push back
 
