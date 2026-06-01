@@ -54,6 +54,13 @@ Write in UK English throughout (optimise, behaviour, programme, colour). No em d
 
 Then wait for a real paste. This rule is not negotiable. If the user pushes back, hold the line.
 
+**Classifying the Q4 answer (tone document vs writing samples).** This decision is the only thing that determines whether `references/voice-notes.md` gets created later. Judge by what the user actually gave you:
+
+- **Tone-of-voice document** — content that *describes* how they sound: adjectives, rules, do/don't lists, brand-voice guidelines. Create `references/voice.md` only.
+- **Writing samples** — real artefacts written for another purpose: an actual email, post, or DM, pasted raw. Create `references/voice.md` **and** `references/voice-notes.md`.
+
+If it is genuinely unclear which one they gave, ask once: "Is that your tone-of-voice guidelines, or a real sample you've written?" then branch on their answer. If they give both, treat it as samples and create both files.
+
 **Q5. What are your 2-3 biggest priorities for the next 90 days?**
 "Quarterly, not yearly. Be specific. A number, a deadline, a deliverable. Push me back if I don't push you on something vague."
 
@@ -90,19 +97,23 @@ Files to write (use the answers from `second-brain-intake.md`):
 | `references/voice-notes.md` | Q4 (samples only) | Only create this file if Q4 was answered with writing samples (not a tone-of-voice document). Three short observation paragraphs: (1) sentence rhythm and length tendencies, (2) hedging and qualifier patterns, (3) register (formal/informal, warm/dry, direct/diplomatic). Do not capture content opinions or specific claims. This is a register reference, not a content reference. |
 | `references/templates-index.md` | Q8 | List of named artefacts and their locations. See conditional logic below for the empty-answer case. |
 
-Then update **both** root operating manuals, `CLAUDE.md` and `AGENTS.md`. They are twins: `CLAUDE.md` is read by Claude, `AGENTS.md` is read by Codex CLI. Replace the **same** `{{placeholders}}` in each with **identical** values, so the brain works the same under either agent:
+All scaffolded files ship as plain markdown bodies with no YAML frontmatter. That is deliberate for the starter kit: it keeps the brain readable for newcomers on their first day. The frontmatter conventions used in larger production vaults are not part of this starter brain, so do not add them.
+
+Then update **both** root operating manuals, `CLAUDE.md` and `AGENTS.md`. They are twins: `CLAUDE.md` is read by Claude, `AGENTS.md` is read by Codex CLI. Replace the **same** named tokens in each with **identical** values, so the brain works the same under either agent:
 
 - `{{name}}` → the user's name from Q1
 - `{{role_one_liner}}` → their role/business one-liner from Q1
 - `{{working_pattern}}` → solo/team, full-time/alongside, from Q1
 - `{{business_one_liner}}` → the business one-liner from Q1
-- `{{services_short}}` → 1-line summary of services from Q2
-- `{{icp_short}}` → 1-line summary of ICP from Q3
+- `{{services_short}}` → a single plain sentence summarising the services from Q2 (no list, no markdown, aim for under 20 words)
+- `{{icp_short}}` → a single plain sentence summarising the ideal client from Q3 (no list, no markdown, aim for under 20 words)
 - `{{priorities_list}}` → numbered list, same content as `priorities.md`
 - `{{populated_context_files}}` → list of files now populated in `context/`, as a bulleted list of wikilinks
 - `{{populated_reference_files}}` → same for `references/`
 
-If `AGENTS.md` is not present (an older copy of the kit), skip it silently and fill `CLAUDE.md` only. Never create `AGENTS.md` from scratch if it is missing; only fill the placeholders in the one that ships with the kit.
+Replace **only** the exact named tokens listed above. Do not pattern-match on `{{` … `}}`: any double-brace text that is not in this list (for example the word *placeholders* in each manual's own header note) is documentation, leave it exactly as it is.
+
+If `AGENTS.md` is not present (an older copy of the kit), skip it silently and fill `CLAUDE.md` only. Never create `AGENTS.md` from scratch if it is missing; only fill the named tokens in the one that ships with the kit.
 
 ### Conditional logic for Q8 (empty answer)
 

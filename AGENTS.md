@@ -2,7 +2,7 @@
 
 > This is the root operating manual for your second brain, for AI coding agents that read `AGENTS.md` (such as OpenAI Codex CLI). It is the Codex-side twin of `CLAUDE.md`: same brain, same content, read by a different agent. Your agent reads this file at the start of every session in this folder. It tells the agent who you are, what matters to you, and where to find more detail.
 >
-> The `{{placeholders}}` below are filled in automatically when you run the `second-brain` skill. You can edit anything by hand afterwards, but the skill is the easier way: edit `second-brain-intake.md` and re-run.
+> The placeholder values below are filled in automatically when you run the `second-brain` skill. You can edit anything by hand afterwards, but the skill is the easier way: edit `second-brain-intake.md` and re-run.
 
 ---
 
