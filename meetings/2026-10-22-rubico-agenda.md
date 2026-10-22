@@ -1,6 +1,6 @@
 # Rubico | Heyday Weekly: Thu Oct 22, 2026, 9:00 ET
 
-Sources: both MASTER Rubico docs, Fathom (Rubico Oct 15, Armagh Oct 19), Gmail, Slack #agents.
+Sources: both MASTER Rubico docs, Fathom (Rubico Oct 15, Armagh Oct 19), Gmail, Slack #agents, Heyday Dashboard.
 
 ## Heyday Web Media (AAAHI sites)
 
@@ -37,6 +37,12 @@ Pam swaps vehicle photos and they come out squashed: FCT Our Vehicles, Hotard ho
   3. Do it on staging first. Check desktop, tablet and phone before going live.
 - **Also:** 4 broken photos on FCT Bus Repair.
 - **Ask Rubico:** hours estimate, start date, and who clears the cache and pushes it live.
+
+## Also open on your dashboard
+
+1. **Hotard Shuttle accessibility audit:** Rosalinda flagged 13 items (mostly alt text and headings, plus one color-contrast fix, #13). Hand Rubico the sheet.
+2. **Hotard Coaches launch: /terms and /email folders.** They didn't carry over on the Sun Diego launch and Eric restored them. Decide who handles them for Coaches: Eric or Rubico. Pam wants Eric kept in the loop.
+3. **Jackson can't get admin on the live Armagh portal.** You posted it to Rubico on 9/28 and it's still unresolved.
 
 ## Your open items
 
