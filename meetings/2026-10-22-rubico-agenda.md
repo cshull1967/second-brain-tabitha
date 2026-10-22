@@ -1,6 +1,6 @@
 # Rubico | Heyday Weekly: Thu Oct 22, 2026, 9:00 ET
 
-Sources: both MASTER Rubico docs, Fathom (Rubico Oct 15, Armagh Oct 19), Gmail.
+Sources: both MASTER Rubico docs, Fathom (Rubico Oct 15, Armagh Oct 19), Gmail, Slack #agents.
 
 ## Heyday Web Media (AAAHI sites)
 
@@ -24,15 +24,19 @@ Sources: both MASTER Rubico docs, Fathom (Rubico Oct 15, Armagh Oct 19), Gmail.
 5. **CPA vs Admin order visibility** (Oliver, from Oct 15): fixed?
 6. **Estimate increase**: did the email to John go out?
 
-## ClickUp: open tasks assigned to Rubico (not in their doc)
+## Photo frames: AAAHI brand sites (NEW, top priority)
 
-1. **Hotard Shuttle Dev**: still open, was due Aug 13. What's left before close?
-2. **Final Accessibility: Hotard Shuttle**: overdue, was due Sep 15. Blocked on sheet access (above).
-3. **Hotard Coaches: migrate page from current site**: to do. Tie to Coaches start date.
-4. **SMS policy page (FCT, AAA, ACE)**: in dev, no movement since Aug 21. Done on all 3 sites?
-5. **Child-Free Insights + Child-Free Trust rebuild quote**: to do. Chloe owed a revised estimate on Oct 1 (add 2 hrs for diagnosis, test only 1 form). Where is it?
-6. **Luxe Travel: Krista Fogelsong page**: to do since Sep 14. Get a date.
-7. **Armagh: Audit prototype**: still "to do." Close it or confirm Step 5 fix is in the portal build.
+Pam swaps vehicle photos and they come out squashed: FCT Our Vehicles, Hotard home page and industry cards. Cause: those photo boxes resize to fit each photo instead of using a fixed frame.
+
+- **Scope:** Devon checked all 5 sites. **601 of 950 photo spots** break when a photo of a different shape is swapped in.
+- **Fix sheet for Rubico:** https://docs.google.com/spreadsheets/d/1tT-zvz0fYI4XJfEPeM6O3kc_oap8jKXtUEcQY318GUc/edit (one fix per site)
+- **The fix:** in Elementor, set a fixed Height on each photo and set Object Fit to Cover. Other Vehicles already works this way.
+- **Rules so nothing looks different today:**
+  1. Set each frame to the shape of the photo already in it. 477 of 547 spots will look identical.
+  2. Center the crop on the vehicle (object position).
+  3. Do it on staging first. Check desktop, tablet and phone before going live.
+- **Also:** 4 broken photos on FCT Bus Repair.
+- **Ask Rubico:** hours estimate, start date, and who clears the cache and pushes it live.
 
 ## Your open items
 
